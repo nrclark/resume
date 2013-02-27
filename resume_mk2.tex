@@ -1,0 +1,205 @@
+
+\documentclass[letterpaper, 10pt]{article}
+%\documentclass[letter, 9pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{nrcresume}
+\usepackage{lipsum,multicol}
+\usepackage{pbox}
+\usepackage[scaled]{helvet}
+\usepackage{parcolumns}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
+
+\usepackage[T1]{fontenc}
+\linespread{0.7}
+
+\newcommand{\Lthree}{L-3 Communications Ocean Systems}
+\begin{document}
+%%%%%%%%%%%%%%% Title %%%%%%%%%%%%
+\nrctitle
+{Nicholas Clark}
+{246 Mathilda Dr.}
+{Goleta, CA 93117}
+{805-636-4033}
+{nicholas.clark@gmail.com}
+%
+\begin{center}
+\Large \textbf{\textsc{Embedded Systems Designer}}\\
+\large \textbf{{Circuit Design, Firmware, Signal Processing, Technical Writing}}\par
+\smallskip
+Electrical engineer with six years experience in embedded systems. 
+Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms. 
+\end{center}
+\smallskip
+\hrule
+\smallskip
+
+
+\begin{parcolumns}[nofirstindent, colwidths={1=.15\linewidth}]{2}
+  \colchunk[1]{%
+  L-3 Communications Ocean Systems\\*
+  \\*
+  \\*
+  \\*
+  }
+  \colchunk[2]{%
+  \textbf{University of XXX, XXX}\hfill 2011 - 2013 (Expected)\\*
+  Master of Science, Computer Science, 4.0/4.0\\*
+  \\*
+  \textbf{University of YYY, YYY}\hfill 2005 - 2009\\*
+  Bachelor of Technology, Computer Science, 10.0/10.0
+  }
+\end{parcolumns}
+\par\smallskip
+\hrule
+\smallskip
+\noindent \begin{minipage}[t]{0.5\textwidth}
+
+\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt}% 50% of original values
+
+\begin{multicols}{3}
+   \noindent
+   \begin{equation}\sum F_x = 0\end{equation}
+   \begin{equation}\frac{dP}{dx} - p = 0\end{equation}
+   \begin{equation}\sum F_y = 0\end{equation}
+   \begin{equation}\frac{dQ}{dx} + q = 0\end{equation}
+   \begin{equation}\sum M = 0\end{equation}
+   \begin{equation}\frac{dQ}{dx} + q = 0\end{equation}
+\end{multicols}
+
+\begin{tabular}{ l c r }
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+\end{tabular}
+
+
+\makeheader{Work Experience}
+
+\begin{multicols}{2} \noindent \raggedright L-3 Communications Ocean Systems\vfill \columnbreak \noindent \raggedleft Goleta, CA\end{multicols}
+\par\nrccolstring{\textbf{L-3 Communications Ocean Systems}}{2011-Present}
+\nrccolstring{\textbf{L-3 Communications Ocean Systems}}{2011}
+\nrccolstring{Electrical Engineer II}{2011-Present}
+\setlength{\mylength}{\widthof{\noindent \raggedright Electrical Engineer II}}%
+\noindent \begin{minipage}[t]{\mylength}\noindent \raggedright Electrical Engineer II\\ \end{minipage}
+\noindent \begin{minipage}[t]{\dimexpr \textwidth - \mylength \relax}\noindent \raggedleft 2011-Present\\ \end{minipage}\\
+
+\noindent \begin{minipage}[t]{0.5\textwidth}\noindent \raggedright Electrical Engineer\\ \end{minipage}
+\noindent \begin{minipage}[t]{0.5\textwidth}\noindent \raggedleft 2007-2011\\ \end{minipage}\\
+\par
+Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at two US Navy bases. Electronics design lead on a \$70M coastal observatory contract with the NSF and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the manufacture and testing of hundreds of circuit boards across several product lines.
+
+\end{minipage}
+
+\begingroup \raggedright dump \endgroup \begingroup \raggedleft load\endgroup
+
+
+\begin{tabular}{l | r} % 3 cols (left, ctr, right); vert. lines
+dump & report\\
+
+\end{tabular}
+
+
+\par\nrccolstring{\textbf{L-3 Communications Ocean Systems}}{2011-Present}
+
+\begingroup
+\raggedleft \noindent \pbox{2cm}{Hello world!}
+\raggedright \noindent \pbox{100cm}{Hello world!}
+\endgroup
+
+\nrcsinglesection
+{Career Objective}
+{Full-time employment as an electrical engineer.}
+\nrcsinglesection
+{Education}
+{B.S. - University of California, Santa Barbara \\
+Major: Electrical engineering, with emphasis on signal and image processing.\\
+Minor: Technical writing. \\
+Current grade level: Senior \\
+Expected date of graduation: March 2007 \\}
+
+\makeheader{Summary Of Academic Qualifications / Work Experience:}
+\par \smallskip \smallskip
+%%%%%%%%%% Columns%%%%%%%%%%%%%%
+% first column
+\nrcmanualcol{0.35}{
+\textit{\underline{General}}:\\
+Public speaking/presentations\\
+Design projects/team experience\\
+Machine shop experience\\
+Technical writing\\
+Computer hardware/software support\\
+}
+% first column
+\nrcmanualcol{0.2}{
+\textit{\underline{Software \& Tools}}:\\
+MATLAB / Simulink\\
+Microsoft Office\\
+Microsoft Publisher\\
+Adobe Photoshop\\
+AutoCAD LT\\
+}
+\nrcmanualcol{0.5}{
+\textit{\underline{Coursework Focus: Signal Processing}}:\\
+Signal Analysis and Processing 1-3\\
+Digital Signal Processing\\
+Applications of Signal Processing\\
+Fundamentals of Computer Image Processing\\
+Senior research project: Digital imaging systems\\
+}
+\par \smallskip \smallskip
+% first column
+\nrcmanualcol{0.35}{
+\textit{\underline{Engineering Focus}}:\\
+Analog and digital signal processing\\
+Analog/computer-based control systems\\
+Operations/Component engineering\\
+Digital logic/Computer programming\\
+Basic analog and CMOS design\\
+}
+% first column
+\nrcmanualcol{0.4}{
+\textit{\underline{Programming, Operating systems, Support}}:\\
+MATLAB\\
+Console-based C/C++\\
+Verilog\\
+MIPS Assembly Programming\\
+Diagnosis/repair of PC and Macintosh hardware\\
+Diagnosis/support for Windows and MacOS\\
+BSD/Unix, Linux, MS-DOS\\
+}
+\par \smallskip \smallskip
+%%%%%%%%%% Work Experience  #1%%%%%%%%%%%%%%
+\noindent \underline{Motion Engineering, Inc:} \vspace{0.4em} \\
+%
+\noindent \begin{minipage}[t]{0.5\textwidth}
+\begin{flushleft} 
+\textit{Goleta, CA, June 2006-Present}\\
+\end{flushleft}
+\end{minipage}
+\noindent \begin{minipage}[t]{0.5\textwidth}
+\begin{flushright} 
+\textit{Manager: Dave Britton (805) 681-3310 x278}\\
+\end{flushright}
+\end{minipage}
+%
+\noindent \begin{minipage}[t]{\widthof{$\bullet$}}
+\begin{flushleft} 
+$\bullet$
+\end{flushleft}
+\end{minipage}
+\newskip{\mylength}
+\setlength{\mylength}{\widthof{$\bullet$}}%
+\noindent \begin{minipage}[t]{\dimexpr \textwidth - 1.2\mylength \relax}
+Operations/Manufacturing Intern: Worked as a team member in the Operations department of a \$35M/year motion control systems company. Assisted in the conversion of products to RoHS-compliance. Chose, ordered, and tested potential replacements for old/obsolete components. Interacted directly with contract manufacturer FinePitch, global resource Larson and Toubro, and several component distributors. Auctioned and sold \$20k thermal chamber.
+\end{minipage}
+\par
+\bigskip
+\makeheader{Work Experience}
+\par
+L-3 Communications, Ocean Systems:	Electrical Engineer; Electrical Engineer II\\
+Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at two US Navy bases. Electronics design lead on a \$70M coastal observatory contract with the NSF and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the manufacture and testing of hundreds of circuit boards across several product lines. (Goleta, CA, February 2007 – Present)
+
+
+\end{document}

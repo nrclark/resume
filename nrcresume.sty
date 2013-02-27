@@ -1,0 +1,73 @@
+% this is my first package
+% 
+% (c) Buffalo Bill
+% LPPL LaTeX Public Project License
+%  
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{nrcresume}
+  [2013/02/26 v0.01 Nick's resume style!]
+\newskip{\mylength}
+\newskip{\mylengthb}
+
+%%%%%%%%%%%%%% Title %%%%%%%%%%%%%%
+\newcommand{\nrctitle}[5]{
+\setlength{\mylength}{\widthof{\huge \textbf {#1}}}%
+\noindent \begin{minipage}[b]{\textwidth}
+\noindent \begin{minipage}[b]{\mylength}
+    \begin{flushleft} 
+        \huge \textbf {#1\vspace{0.1em}}\\
+    \end{flushleft}
+\end{minipage}
+\noindent \begin{minipage}[b]{\dimexpr \textwidth - \mylength \relax}
+    \begin{flushright} 
+        \noindent \textit{#5}\\
+        \textit{#2 $\bullet$ #3 $\bullet$ #4}\\
+    \end{flushright}
+\end{minipage}   
+\hrule
+\smallskip
+\end{minipage}}
+%%%%%%%%%%%%%% One-Off Columns%%%%%%%%%%%%%%%%%%
+% Manually-set Column
+\newcommand{\nrcmanualcol}[2]{
+\noindent 
+\begin{minipage}[t]{#1\textwidth}
+\begin{flushleft} 
+#2
+\end{flushleft}
+\end{minipage}
+}
+%%%%%%%%%%%%%% Single-Section %%%%%%%%%%%%%%%%%%
+%
+\newcommand{\makeheader}[1]{\begingroup \noindent \Large \textbf{\textsc{#1\\}} \endgroup}
+%
+\newcommand{\nrcsinglesection}[2]{
+\setlength{\mylength}{\widthof{\makeheader{#1:\ }}}
+\noindent \begin{minipage}[t]{\mylength}
+\begin{flushleft} 
+\makeheader{#1:\ }
+\end{flushleft}
+\end{minipage}
+\noindent \begin{minipage}[t]{\dimexpr \textwidth - \mylength \relax}
+\begin{flushleft} 
+\noindent #2
+\end{flushleft}
+\end{minipage}
+\par \smallskip \smallskip
+}
+
+
+\newcommand{\nrccolstring}[2]{
+\begingroup
+\setlength{\mylength}{\widthof{\noindent \raggedright #1}}%
+\setlength{\mylengthb}{\dimexpr \mylength + 1em \relax}%
+\noindent \begin{minipage}[t]{\mylengthb}
+\noindent \raggedright #1\\ 
+%\rule{\mylengthb}
+\end{minipage}
+\noindent \begin{minipage}[t]{\dimexpr \textwidth - \mylengthb \relax}\noindent \raggedleft #2\\ \end{minipage}\\
+\endgroup}
+
+\endinput
+%%
+%% End of file `mypackage.sty'.
