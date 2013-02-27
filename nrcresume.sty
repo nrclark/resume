@@ -44,16 +44,7 @@
 }
 %%%%%%%%%%%%%% Single-Section %%%%%%%%%%%%%%%%%%
 %
-\newcommand{\makeheader}[1]{%
-\begingroup%
-\noindent%
-\Large%
-\textbf{\textsc{#1\\}}%
-\hfill%
-\endgroup%
-\hfill%
-}
-%
+
 \newcommand{\nrcsinglesection}[2]{
 \setlength{\mylength}{\widthof{\makeheader{#1:\ }}}
 \noindent \begin{minipage}[t]{\mylength}
@@ -93,17 +84,17 @@
   \end{minipage}%
 \endgroup}
 %%%%%%%%%%%% Making Two Columns%%%%%%%%%%%%%%%
-\newcommand{\nrctwocols}[2]{
-\hrule
-\begingroup
-\setlength\multicolsep{0pt}
-\begin{multicols}{2}
-\setlength{\columnseprule}{0.4pt}
-\setlength{\columnsep}{0.5\linewidth}
-\begin{flushleft}#1\end{flushleft}
-\vfill \columnbreak%
-\begin{flushright}#2\end{flushright}
-\vfill \columnbreak%
+\newcommand{\nrctwocols}[2]{%
+\hrule%
+\begingroup%
+\setlength\multicolsep{0pt}%
+\begin{multicols}{2}%
+\setlength{\columnseprule}{0.4pt}%
+\setlength{\columnsep}{0.5\linewidth}%
+\begin{flushleft}#1\end{flushleft}%
+\columnbreak%
+\begin{flushright}#2\end{flushright}%
+\columnbreak%
 \end{multicols}
 \endgroup
 }

@@ -1,24 +1,20 @@
-
 \documentclass[letterpaper, 10pt]{article}
-%\documentclass[letter, 9pt]{article}
-\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
-\usepackage{calc}
-\usepackage{setspace}
-\usepackage{nrcresume}
-\usepackage{lipsum,multicol}
-\usepackage{pbox}
+\usepackage[margin=0.56in]{geometry}
 
-\usepackage{parcolumns}
-\usepackage{relsize}
-\usepackage{soul}
-\usepackage{blindtext}
+\usepackage{calc}
+
+\usepackage{nrcresume}
+
 \usepackage{enumitem}
+\usepackage{tabularx}
 
 %\usepackage[scaled]{helvet}
 %\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
 
 \usepackage[T1]{fontenc}
 \usepackage{setspace}
+
+\usepackage[usenames,dvipsnames]{xcolor}
 
 \pagenumbering{gobble}
 
@@ -39,6 +35,16 @@
 \newcommand{\WorkExperienceEndBreak}{%
     \par\bigskip%
 }
+
+\newcommand{\makeheader}[1]{%
+\begingroup%
+    \noindent%
+    \textcolor{MidnightBlue}{\Large \textbf{\textsc{#1\\}}}%
+    \hfill%
+\endgroup%
+\hfill%
+}
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Work Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -97,8 +103,8 @@
 {805-636-4033}
 {nicholas.clark@gmail.com}
 %
-\begin{center}
-\Large \textbf{\textsc{Embedded Systems Designer}}\\
+\begin{center}\par\smallskip
+\textcolor{RoyalBlue}{\Large \textbf{\textsc{Embedded Systems Designer}}}\par
 \large \textbf{{Circuit Design, Firmware, Signal Processing, Technical Writing}}\par
 \smallskip
 \noindent \begin{minipage}[t]{0.75\textwidth}%
@@ -109,19 +115,25 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 \end{minipage}
 \end{center}
 \par \bigskip
-
-\nrctwocols%
 %%%%%%%%%%%%% Column 1%%%%%%%%%%%%%%%
 %
 %    horizontal: leftmargin, rightmargin, itemindent, listparindent, labelwidth, labelsep
 %    vertical: topsep, partopsep, parsep, itemsep
 %
-{%
+\newcommand{\MyColumnOne}{%
     \setitemize[0]{leftmargin=*, parsep=0pt, itemsep=0pt, topsep=0pt, partopsep=0pt}%
     \noindent \begin{minipage}[t]{0.45\textwidth}%
-	\par \smallskip \begin{spacing}{1}%
+	\par \smallskip \begin{spacing}{0.95}%
 
     \begin{flushleft} %
+	\makeheader{Human} \par%
+    \begin{itemize}%
+        \item Designing for usability
+        \item Technical writing
+        \item Specifying and understanding design requirements
+        \item Fast learner
+	\end{itemize}%
+	\WorkExperienceMidBreak
 	\makeheader{Electrical Engineering} \par%
     \begin{itemize}%
         \item Analog and digital circuit design techniques
@@ -163,6 +175,7 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 	    \item Shell scripting in BASH\\
 	    \item Typesetting with \LaTeX\\
 	    \item Version control with Mercurial, Subversion, and Git\\
+	    \item Makefiles and GCC\\
 	\end{itemize}
     %
 	\WorkExperienceMidBreak
@@ -179,20 +192,20 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 \end{spacing} \end{minipage}%
 }%
 %%%%%%%%%%%%% Column 2%%%%%%%%%%%%%%%
-{%
+\newcommand{\MyColumnTwo}{%
     \noindent \begin{minipage}[t]{0.45\textwidth}%
-	\par \smallskip \begin{spacing}{0.87}%
+	\par \smallskip \begin{spacing}{0.95}%
 	\makeheader{Work Experience} \par%
 		\workLthree
 		\workMotionEng
-%		\workUCSBLifesci
-%	
-%	\makeheader{Education} \par%
-%	    \EducationUCSB
-%	
-%	\makeheader{Misc} \par%
-%   	\WorkExperienceLineOne{FIRST Robotics}{Santa Barbara, CA}
-%   	\WorkExperienceLineTwo{Engineering Mentor}{2013}
+		\workUCSBLifesci
+	
+	\makeheader{Education} \par%
+	    \EducationUCSB
+	
+	\makeheader{Volunteer} \par%
+   	\WorkExperienceLineOne{FIRST Robotics}{Goleta, CA}
+   	\WorkExperienceLineTwo{Team 1717 Engineering Mentor}{2013 Build Season}
 %   	\WorkExperienceMidBreak
 %
 %    	\WorkExperienceLineOne{Hobbies}{}
@@ -201,7 +214,15 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 %    	\WorkExperienceLineTwo{Wilderness Backpacking}{}
 %    	\WorkExperienceLineTwo{Playing Guitar}{}
 %    	\WorkExperienceMidBreak
-
 	\end{spacing} \end{minipage}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nrctwocols
+%\begin{center}$\bullet$\end{center}\par
+
+\noindent\begin{tabularx}{\textwidth}{@{}X|X@{}} 
+\hline
+{\MyColumnOne\hfill} & {\hfill\MyColumnTwo}
+\end{tabularx}
 \end{document}
