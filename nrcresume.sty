@@ -92,7 +92,22 @@
     \raggedleft #2
   \end{minipage}%
 \endgroup}
-
+%%%%%%%%%%%% Making Two Columns%%%%%%%%%%%%%%%
+\newcommand{\nrctwocols}[2]{
+\hrule
+\begingroup
+\setlength\multicolsep{0pt}
+\begin{multicols}{2}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{0.5\linewidth}
+\begin{flushleft}#1\end{flushleft}
+\vfill \columnbreak%
+\begin{flushright}#2\end{flushright}
+\vfill \columnbreak%
+\end{multicols}
+\endgroup
+}
+%
 \endinput
 %%
 %% End of file `mypackage.sty'.

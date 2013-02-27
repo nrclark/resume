@@ -7,12 +7,14 @@
 \usepackage{nrcresume}
 \usepackage{lipsum,multicol}
 \usepackage{pbox}
-\usepackage[scaled]{helvet}
+
 \usepackage{parcolumns}
 \usepackage{relsize}
 \usepackage{soul}
-
-\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
+\usepackage{blindtext}
+\sloppy
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
 
 \usepackage[T1]{fontenc}
 \usepackage{setspace}
@@ -34,15 +36,13 @@
 Electrical engineer with six years experience in embedded systems. 
 Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms. 
 \end{center}
-\smallskip \bigskip
-\hrule
 \par \bigskip
-
-
-\begin{spacing}{0.5} \noindent \begin{minipage}[t]{0.4\textwidth}
-
-\makeheader{Work Experience}
-\par
+\nrctwocols
+{\noindent \begin{minipage}[t]{0.45\textwidth} \par \smallskip \blindtext \end{minipage}}
+{\noindent \begin{minipage}[t]{0.45\textwidth}%
+\par \smallskip \begin{spacing}{0.5}%
+\makeheader{Work Experience}%
+\par%
 \nrccolstring{\textbf{L-3 Ocean Systems}}{\textbf{Goleta, CA}}
 \nrccolstring{\small\textit{Electrical Engineer II}}{\small\textit{2011-2013}}
 \nrccolstring{\small\textit{Electrical Engineer I}}{\small\textit{2007-2011}}
@@ -82,10 +82,10 @@ Won the ITC 2006 student paper competition for a paper on vehicle-mounted 360-de
 \nrccolstring{\small\textit{Programming}}{}
 \nrccolstring{\small\textit{Wilderness backpacking}}{}
 \nrccolstring{\small\textit{Playing guitar}}{}
-
-\end{minipage} \end{spacing}
+\end{spacing} \end{minipage} 
 \par
-\par \bigskip\bigskip\bigskip\bigskip
+\par \bigskip}
+\par\bigskip\bigskip\bigskip
 \par
 \par
 \par
