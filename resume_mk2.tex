@@ -9,10 +9,13 @@
 \usepackage{pbox}
 \usepackage[scaled]{helvet}
 \usepackage{parcolumns}
+\usepackage{relsize}
+\usepackage{soul}
+
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
 
 \usepackage[T1]{fontenc}
-\linespread{0.7}
+\usepackage{setspace}
 
 \newcommand{\Lthree}{L-3 Communications Ocean Systems}
 \begin{document}
@@ -31,70 +34,70 @@
 Electrical engineer with six years experience in embedded systems. 
 Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms. 
 \end{center}
-\smallskip
+\smallskip \bigskip
 \hrule
-\smallskip
+\par \bigskip
 
 
-\begin{parcolumns}[nofirstindent, colwidths={1=.15\linewidth}]{2}
-  \colchunk[1]{%
-  L-3 Communications Ocean Systems\\*
-  \\*
-  \\*
-  \\*
-  }
-  \colchunk[2]{%
-  \textbf{University of XXX, XXX}\hfill 2011 - 2013 (Expected)\\*
-  Master of Science, Computer Science, 4.0/4.0\\*
-  \\*
-  \textbf{University of YYY, YYY}\hfill 2005 - 2009\\*
-  Bachelor of Technology, Computer Science, 10.0/10.0
-  }
-\end{parcolumns}
-\par\smallskip
-\hrule
-\smallskip
-\noindent \begin{minipage}[t]{0.5\textwidth}
-
-\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt}% 50% of original values
-
-\begin{multicols}{3}
-   \noindent
-   \begin{equation}\sum F_x = 0\end{equation}
-   \begin{equation}\frac{dP}{dx} - p = 0\end{equation}
-   \begin{equation}\sum F_y = 0\end{equation}
-   \begin{equation}\frac{dQ}{dx} + q = 0\end{equation}
-   \begin{equation}\sum M = 0\end{equation}
-   \begin{equation}\frac{dQ}{dx} + q = 0\end{equation}
-\end{multicols}
-
-\begin{tabular}{ l c r }
-  1 & 2 & 3 \\
-  4 & 5 & 6 \\
-  7 & 8 & 9 \\
-\end{tabular}
-
+\begin{spacing}{0.5} \noindent \begin{minipage}[t]{0.4\textwidth}
 
 \makeheader{Work Experience}
-
-\begin{multicols}{2} \noindent \raggedright L-3 Communications Ocean Systems\vfill \columnbreak \noindent \raggedleft Goleta, CA\end{multicols}
-\par\nrccolstring{\textbf{L-3 Communications Ocean Systems}}{2011-Present}
-\nrccolstring{\textbf{L-3 Communications Ocean Systems}}{2011}
-\nrccolstring{Electrical Engineer II}{2011-Present}
-\setlength{\mylength}{\widthof{\noindent \raggedright Electrical Engineer II}}%
-\noindent \begin{minipage}[t]{\mylength}\noindent \raggedright Electrical Engineer II\\ \end{minipage}
-\noindent \begin{minipage}[t]{\dimexpr \textwidth - \mylength \relax}\noindent \raggedleft 2011-Present\\ \end{minipage}\\
-
-\noindent \begin{minipage}[t]{0.5\textwidth}\noindent \raggedright Electrical Engineer\\ \end{minipage}
-\noindent \begin{minipage}[t]{0.5\textwidth}\noindent \raggedleft 2007-2011\\ \end{minipage}\\
 \par
-Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at two US Navy bases. Electronics design lead on a \$70M coastal observatory contract with the NSF and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the manufacture and testing of hundreds of circuit boards across several product lines.
+\nrccolstring{\textbf{L-3 Ocean Systems}}{\textbf{Goleta, CA}}
+\nrccolstring{\small\textit{Electrical Engineer II}}{\small\textit{2011-2013}}
+\nrccolstring{\small\textit{Electrical Engineer I}}{\small\textit{2007-2011}}
+\nrccolstring{\small\textit{Electrical Engineering Intern}}{\small\textit{2007}}
+\par \smallskip \smallskip
+Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at US Navy bases. Electronics design engineer on a \$70M coastal observatory contract with the NSF and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the manufacture and testing of hundreds of circuit boards across several product lines.
+\par\bigskip
+%
+\nrccolstring{\textbf{Motion Engineering, Inc}}{\textbf{Goleta, CA}}
+\nrccolstring{\small\textit{Engineering Intern}}{\small\textit{2006-2007}}
+\par \smallskip \smallskip
+Engineering intern. Worked with high-performance motion controllers used in semiconductor fab plants. Assisted in converting several product lines to be RoHS-compliant. Worked as a component engineer to solve obsolescence issues and suggest workarounds for unavailable parts. Interacted
+directly with global resources. Auctioned and sold test equipment.
+\par\bigskip
+%
+\nrccolstring{\textbf{UCSB Life Sciences Department}}{\textbf{Goleta, CA}}
+\nrccolstring{\small\textit{IT Helpdesk}}{\small\textit{2004-2006}}
+\par \smallskip \smallskip
+Provided support for 800+ faculty, staff and graduate students in two academic departments and two interdisciplinary graduate programs. Responsible for basic and advanced troubleshooting to diagnose and resolve both hardware and software problems. Configured and maintained OS X, Linux, Windows, and FreeBSD computers.
+\par\bigskip
+%
+\makeheader{Education}
+\par
+\nrccolstring{\textbf{University of California}}{\textbf{Santa Barbara, CA}}
+\nrccolstring{\small\textit{B.S. Electrical Engineering}}{\small\textit{2007}}
+\par \smallskip \smallskip
+Coursework was focus on signal processing and technical writing. Active in student chapter of IEEE. 
+Won the ITC 2006 student paper competition for a paper on vehicle-mounted 360-degree FOV camera systems.
+\par\bigskip
+%
+\makeheader{Misc}
+\par
+\nrccolstring{\textbf{FIRST Robotics }}{\textbf{Santa Barbara, CA}}
+\nrccolstring{\small\textit{Engineering Mentor}}{\small\textit{2013}}
+\par \smallskip \smallskip
+\nrccolstring{\textbf{Hobbies}}{}
+\nrccolstring{\small\textit{Programming}}{}
+\nrccolstring{\small\textit{Wilderness backpacking}}{}
+\nrccolstring{\small\textit{Playing guitar}}{}
 
-\end{minipage}
+\end{minipage} \end{spacing}
+\par
+\par \bigskip\bigskip\bigskip\bigskip
+\par
+\par
+\par
+\par
 
-\begingroup \raggedright dump \endgroup \begingroup \raggedleft load\endgroup
 
 
+
+
+
+
+\par\bigskip
 \begin{tabular}{l | r} % 3 cols (left, ctr, right); vert. lines
 dump & report\\
 

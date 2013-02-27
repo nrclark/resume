@@ -9,24 +9,29 @@
 \newskip{\mylength}
 \newskip{\mylengthb}
 
+\newskip{\registera}
+\newskip{\registerb}
+
+
 %%%%%%%%%%%%%% Title %%%%%%%%%%%%%%
-\newcommand{\nrctitle}[5]{
+\newcommand{\nrctitle}[5]{%
 \setlength{\mylength}{\widthof{\huge \textbf {#1}}}%
-\noindent \begin{minipage}[b]{\textwidth}
-\noindent \begin{minipage}[b]{\mylength}
-    \begin{flushleft} 
-        \huge \textbf {#1\vspace{0.1em}}\\
-    \end{flushleft}
-\end{minipage}
-\noindent \begin{minipage}[b]{\dimexpr \textwidth - \mylength \relax}
-    \begin{flushright} 
-        \noindent \textit{#5}\\
-        \textit{#2 $\bullet$ #3 $\bullet$ #4}\\
-    \end{flushright}
-\end{minipage}   
-\hrule
-\smallskip
-\end{minipage}}
+\noindent \begin{minipage}[b]{\textwidth}%
+\noindent \begin{minipage}[b]{\mylength}%
+    \begin{flushleft}%
+        \huge \textbf {#1\vspace{0.1em}}\\%
+    \end{flushleft}%
+\end{minipage}%
+\noindent \begin{minipage}[b]{\dimexpr \textwidth - \mylength \relax}%
+    \begin{flushright}%
+        \noindent \textit{#5}\\%
+        \textit{#2 $\bullet$ #3 $\bullet$ #4}\\%
+    \end{flushright}%
+\end{minipage}%
+\hrule%
+\smallskip%
+\end{minipage}%
+}
 %%%%%%%%%%%%%% One-Off Columns%%%%%%%%%%%%%%%%%%
 % Manually-set Column
 \newcommand{\nrcmanualcol}[2]{
@@ -39,7 +44,15 @@
 }
 %%%%%%%%%%%%%% Single-Section %%%%%%%%%%%%%%%%%%
 %
-\newcommand{\makeheader}[1]{\begingroup \noindent \Large \textbf{\textsc{#1\\}} \endgroup}
+\newcommand{\makeheader}[1]{%
+\begingroup%
+\noindent%
+\Large%
+\textbf{\textsc{#1\\}}%
+\hfill%
+\endgroup%
+\hfill%
+}
 %
 \newcommand{\nrcsinglesection}[2]{
 \setlength{\mylength}{\widthof{\makeheader{#1:\ }}}
@@ -56,16 +69,28 @@
 \par \smallskip \smallskip
 }
 
+\newcommand{\nrccolstring}[2]{%
+  \begingroup
+  \setlength{\registerb}{\widthof{#2}}%
+  \setlength{\registera}{\dimexpr \linewidth - \registerb \relax}%
+  \noindent\begin{minipage}[t]{\registera}
+    \raggedright #1
+  \end{minipage}%
+  \begin{minipage}[t]{\registerb}
+    \raggedleft #2
+  \end{minipage}%
+\endgroup}
 
-\newcommand{\nrccolstring}[2]{
-\begingroup
-\setlength{\mylength}{\widthof{\noindent \raggedright #1}}%
-\setlength{\mylengthb}{\dimexpr \mylength + 1em \relax}%
-\noindent \begin{minipage}[t]{\mylengthb}
-\noindent \raggedright #1\\ 
-%\rule{\mylengthb}
-\end{minipage}
-\noindent \begin{minipage}[t]{\dimexpr \textwidth - \mylengthb \relax}\noindent \raggedleft #2\\ \end{minipage}\\
+\newcommand{\nrccolstringb}[2]{%
+  \begingroup
+  \setlength{\registerb}{\widthof{#2}}%
+  \setlength{\registera}{\dimexpr \linewidth - \registerb \relax}%
+  \noindent\begin{minipage}[t]{\registera}
+    \raggedright #1
+  \end{minipage}%
+  \begin{minipage}[t]{\registerb}
+    \raggedleft #2
+  \end{minipage}%
 \endgroup}
 
 \endinput
