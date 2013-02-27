@@ -12,14 +12,82 @@
 \usepackage{relsize}
 \usepackage{soul}
 \usepackage{blindtext}
-\sloppy
+\usepackage{enumitem}
+
 %\usepackage[scaled]{helvet}
 %\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
 
 \usepackage[T1]{fontenc}
 \usepackage{setspace}
 
-\newcommand{\Lthree}{L-3 Communications Ocean Systems}
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\WorkExperienceLineOne}[2]{%
+    \nrccolstring{\textbf{#1}}{\textbf{#2}}%
+}
+
+\newcommand{\WorkExperienceLineTwo}[2]{%
+    \nrccolstring{\small\textit{#1}}{\small\textit{#2}}%
+}
+
+\newcommand{\WorkExperienceMidBreak}{%
+    \par \smallskip \smallskip%
+}
+
+\newcommand{\WorkExperienceEndBreak}{%
+    \par\bigskip%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Work Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\workLthree}{%
+	\WorkExperienceLineOne {L-3 Ocean Systems} {Goleta, CA}
+	\WorkExperienceLineTwo {Electrical Engineer II} {2011-2013}
+	\WorkExperienceLineTwo {Electrical Engineer I} {2007-2011}
+	\WorkExperienceLineTwo {Electrical Engineering Intern} {2007}
+	\WorkExperienceMidBreak
+	Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at US Navy
+	bases. Electronics design   engineer on a \$70M coastal observatory contract with the NSF and the University of
+	Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the
+	manufacture and testing of hundreds of circuit boards across several product lines.
+	\WorkExperienceEndBreak%
+}
+
+\newcommand{\workMotionEng}{%
+	\WorkExperienceLineOne {Motion Engineering, Inc} {Goleta, CA}
+	\WorkExperienceLineTwo {Engineering Intern} {2006-2007}
+	\WorkExperienceMidBreak
+    Engineering intern. Worked with high-performance motion controllers used in semiconductor fab plants.
+    Assisted in converting several product lines to be RoHS-compliant. Worked as a component engineer to solve 
+    obsolescence issues and suggest workarounds for unavailable parts. Interacted directly with global contractors.
+    Auctioned and sold test equipment.
+	\WorkExperienceEndBreak%
+}
+
+\newcommand{\workUCSBLifesci}{%
+	\WorkExperienceLineOne {UCSB Life Sciences Department} {Goleta, CA}
+	\WorkExperienceLineTwo {IT Helpdesk} {2004-2006}
+	\WorkExperienceMidBreak
+    Provided support for 800+ faculty, staff and graduate students in two academic departments and two
+    interdisciplinary graduate programs. Responsible for basic and advanced troubleshooting to diagnose and
+    resolve both hardware and software problems. Configured and maintained OS X, Linux, Windows, and FreeBSD
+    computers.
+	\WorkExperienceEndBreak%
+}
+
+\newcommand{\EducationUCSB}{%
+    \WorkExperienceLineOne{University of California} {Santa Barbara, CA}
+    \WorkExperienceLineTwo{B.S. Electrical Engineering} {2007}
+	\WorkExperienceMidBreak
+    Elective coursework focused on embedded systems, DSP, and technical writing. Active in student chapter of IEEE.
+    Won the ITC 2006 student paper competition for a paper on vehicle-mounted 360-degree FOV camera systems.
+	\WorkExperienceEndBreak%
+}
+
+\hyphenation{Micro-blaze} 
+
 \begin{document}
 %%%%%%%%%%%%%%% Title %%%%%%%%%%%%
 \nrctitle
@@ -33,176 +101,107 @@
 \Large \textbf{\textsc{Embedded Systems Designer}}\\
 \large \textbf{{Circuit Design, Firmware, Signal Processing, Technical Writing}}\par
 \smallskip
-Electrical engineer with six years experience in embedded systems. 
-Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms. 
+\noindent \begin{minipage}[t]{0.75\textwidth}%
+\begin{sloppypar}
+Dymanic electrical engineer with six years experience in embedded systems. 
+Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
+\end{sloppypar}
+\end{minipage}
 \end{center}
 \par \bigskip
-\nrctwocols
-{\noindent \begin{minipage}[t]{0.45\textwidth} \par \smallskip \blindtext \end{minipage}}
-{\noindent \begin{minipage}[t]{0.45\textwidth}%
-\par \smallskip \begin{spacing}{0.5}%
-\makeheader{Work Experience}%
-\par%
-\nrccolstring{\textbf{L-3 Ocean Systems}}{\textbf{Goleta, CA}}
-\nrccolstring{\small\textit{Electrical Engineer II}}{\small\textit{2011-2013}}
-\nrccolstring{\small\textit{Electrical Engineer I}}{\small\textit{2007-2011}}
-\nrccolstring{\small\textit{Electrical Engineering Intern}}{\small\textit{2007}}
-\par \smallskip \smallskip
-Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at US Navy bases. Electronics design engineer on a \$70M coastal observatory contract with the NSF and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the manufacture and testing of hundreds of circuit boards across several product lines.
-\par\bigskip
+
+\nrctwocols%
+%%%%%%%%%%%%% Column 1%%%%%%%%%%%%%%%
 %
-\nrccolstring{\textbf{Motion Engineering, Inc}}{\textbf{Goleta, CA}}
-\nrccolstring{\small\textit{Engineering Intern}}{\small\textit{2006-2007}}
-\par \smallskip \smallskip
-Engineering intern. Worked with high-performance motion controllers used in semiconductor fab plants. Assisted in converting several product lines to be RoHS-compliant. Worked as a component engineer to solve obsolescence issues and suggest workarounds for unavailable parts. Interacted
-directly with global resources. Auctioned and sold test equipment.
-\par\bigskip
+%    horizontal: leftmargin, rightmargin, itemindent, listparindent, labelwidth, labelsep
+%    vertical: topsep, partopsep, parsep, itemsep
 %
-\nrccolstring{\textbf{UCSB Life Sciences Department}}{\textbf{Goleta, CA}}
-\nrccolstring{\small\textit{IT Helpdesk}}{\small\textit{2004-2006}}
-\par \smallskip \smallskip
-Provided support for 800+ faculty, staff and graduate students in two academic departments and two interdisciplinary graduate programs. Responsible for basic and advanced troubleshooting to diagnose and resolve both hardware and software problems. Configured and maintained OS X, Linux, Windows, and FreeBSD computers.
-\par\bigskip
+{%
+    \setitemize[0]{leftmargin=*, parsep=0pt, itemsep=0pt, topsep=0pt, partopsep=0pt}%
+    \noindent \begin{minipage}[t]{0.45\textwidth}%
+	\par \smallskip \begin{spacing}{1}%
+
+    \begin{flushleft} %
+	\makeheader{Electrical Engineering} \par%
+    \begin{itemize}%
+        \item Analog and digital circuit design techniques
+        \item Low-noise signal processing and filter design
+        \item PCB design with OrCAD
+        \item Electronics manufacturing and DFM principles
+	\end{itemize}%
+	\WorkExperienceMidBreak
+	\makeheader{Embedded Design} \par%
+    \begin{itemize}%
+        \item FPGA design with Xilinx and Lattice FPGAs
+        \item Microcontroller design with MSP430, AVR, and Microblaze families
+        \item High-performance FPGA-based DSP
+        \item Rigorous firmware design with version control and unit tests
+        \item RMA and task scheduling
+	\end{itemize}%
+	%
+	\WorkExperienceMidBreak       
+	\makeheader{Software Skills} \par%
+    %    
+    \WorkExperienceLineOne{Engineering Software}{}
+	\WorkExperienceMidBreak
+    \begin{itemize}%	
+		\item LTSPICE Circuit Simulator
+		\item OrCAD Schematic Capture \& PCB Layout
+		\item MATLAB / SIMULINK
+		\item Xilinx ISE \& EDK FPGA Design Suites
+		\item TI MSP430 Code Composer Studio
+		\item Atmel Studio 6
+	\end{itemize}%
+    %
+	\WorkExperienceMidBreak
+    \WorkExperienceLineOne{Programming}{}
+	\WorkExperienceMidBreak
+    \begin{itemize}%
+	    \item Verilog HDL\\
+	    \item C / C++\\
+	    \item Python \\
+	    \item Shell scripting in BASH\\
+	    \item Typesetting with \LaTeX\\
+	    \item Version control with Mercurial, Subversion, and Git\\
+	\end{itemize}
+    %
+	\WorkExperienceMidBreak
+    \WorkExperienceLineOne{General Computing}{}
+	\WorkExperienceMidBreak
+    \begin{itemize}%
+	    \item OS X, Linux, and Windows\\
+	    \item Microsoft Office (Outlook, Word, Powerpoint, Excel, Visio)\\
+	    \item Adobe Photoshop \& Illustrator\\
+   	    \item Paint.NET \\
+	\end{itemize}
+
+\end{flushleft}%
+\end{spacing} \end{minipage}%
+}%
+%%%%%%%%%%%%% Column 2%%%%%%%%%%%%%%%
+{%
+    \noindent \begin{minipage}[t]{0.45\textwidth}%
+	\par \smallskip \begin{spacing}{0.87}%
+	\makeheader{Work Experience} \par%
+%		\workLthree
+%		\workMotionEng
+%		\workUCSBLifesci
+%	
+%	\makeheader{Education} \par%
+%	    \EducationUCSB
+%	
+%	\makeheader{Misc} \par%
+%   	\WorkExperienceLineOne{FIRST Robotics}{Santa Barbara, CA}
+%   	\WorkExperienceLineTwo{Engineering Mentor}{2013}
+%   	\WorkExperienceMidBreak
 %
-\makeheader{Education}
-\par
-\nrccolstring{\textbf{University of California}}{\textbf{Santa Barbara, CA}}
-\nrccolstring{\small\textit{B.S. Electrical Engineering}}{\small\textit{2007}}
-\par \smallskip \smallskip
-Coursework was focus on signal processing and technical writing. Active in student chapter of IEEE. 
-Won the ITC 2006 student paper competition for a paper on vehicle-mounted 360-degree FOV camera systems.
-\par\bigskip
-%
-\makeheader{Misc}
-\par
-\nrccolstring{\textbf{FIRST Robotics }}{\textbf{Santa Barbara, CA}}
-\nrccolstring{\small\textit{Engineering Mentor}}{\small\textit{2013}}
-\par \smallskip \smallskip
-\nrccolstring{\textbf{Hobbies}}{}
-\nrccolstring{\small\textit{Programming}}{}
-\nrccolstring{\small\textit{Wilderness backpacking}}{}
-\nrccolstring{\small\textit{Playing guitar}}{}
-\end{spacing} \end{minipage} 
-\par
-\par \bigskip}
-\par\bigskip\bigskip\bigskip
-\par
-\par
-\par
-\par
+%    	\WorkExperienceLineOne{Hobbies}{}
+%    	\WorkExperienceLineTwo{Programming}{}
+%    	\WorkExperienceLineTwo{Web Design}{}
+%    	\WorkExperienceLineTwo{Wilderness Backpacking}{}
+%    	\WorkExperienceLineTwo{Playing Guitar}{}
+%    	\WorkExperienceMidBreak
 
-
-
-
-
-
-
-\par\bigskip
-\begin{tabular}{l | r} % 3 cols (left, ctr, right); vert. lines
-dump & report\\
-
-\end{tabular}
-
-
-\par\nrccolstring{\textbf{L-3 Communications Ocean Systems}}{2011-Present}
-
-\begingroup
-\raggedleft \noindent \pbox{2cm}{Hello world!}
-\raggedright \noindent \pbox{100cm}{Hello world!}
-\endgroup
-
-\nrcsinglesection
-{Career Objective}
-{Full-time employment as an electrical engineer.}
-\nrcsinglesection
-{Education}
-{B.S. - University of California, Santa Barbara \\
-Major: Electrical engineering, with emphasis on signal and image processing.\\
-Minor: Technical writing. \\
-Current grade level: Senior \\
-Expected date of graduation: March 2007 \\}
-
-\makeheader{Summary Of Academic Qualifications / Work Experience:}
-\par \smallskip \smallskip
-%%%%%%%%%% Columns%%%%%%%%%%%%%%
-% first column
-\nrcmanualcol{0.35}{
-\textit{\underline{General}}:\\
-Public speaking/presentations\\
-Design projects/team experience\\
-Machine shop experience\\
-Technical writing\\
-Computer hardware/software support\\
+	\end{spacing} \end{minipage}
 }
-% first column
-\nrcmanualcol{0.2}{
-\textit{\underline{Software \& Tools}}:\\
-MATLAB / Simulink\\
-Microsoft Office\\
-Microsoft Publisher\\
-Adobe Photoshop\\
-AutoCAD LT\\
-}
-\nrcmanualcol{0.5}{
-\textit{\underline{Coursework Focus: Signal Processing}}:\\
-Signal Analysis and Processing 1-3\\
-Digital Signal Processing\\
-Applications of Signal Processing\\
-Fundamentals of Computer Image Processing\\
-Senior research project: Digital imaging systems\\
-}
-\par \smallskip \smallskip
-% first column
-\nrcmanualcol{0.35}{
-\textit{\underline{Engineering Focus}}:\\
-Analog and digital signal processing\\
-Analog/computer-based control systems\\
-Operations/Component engineering\\
-Digital logic/Computer programming\\
-Basic analog and CMOS design\\
-}
-% first column
-\nrcmanualcol{0.4}{
-\textit{\underline{Programming, Operating systems, Support}}:\\
-MATLAB\\
-Console-based C/C++\\
-Verilog\\
-MIPS Assembly Programming\\
-Diagnosis/repair of PC and Macintosh hardware\\
-Diagnosis/support for Windows and MacOS\\
-BSD/Unix, Linux, MS-DOS\\
-}
-\par \smallskip \smallskip
-%%%%%%%%%% Work Experience  #1%%%%%%%%%%%%%%
-\noindent \underline{Motion Engineering, Inc:} \vspace{0.4em} \\
-%
-\noindent \begin{minipage}[t]{0.5\textwidth}
-\begin{flushleft} 
-\textit{Goleta, CA, June 2006-Present}\\
-\end{flushleft}
-\end{minipage}
-\noindent \begin{minipage}[t]{0.5\textwidth}
-\begin{flushright} 
-\textit{Manager: Dave Britton (805) 681-3310 x278}\\
-\end{flushright}
-\end{minipage}
-%
-\noindent \begin{minipage}[t]{\widthof{$\bullet$}}
-\begin{flushleft} 
-$\bullet$
-\end{flushleft}
-\end{minipage}
-\newskip{\mylength}
-\setlength{\mylength}{\widthof{$\bullet$}}%
-\noindent \begin{minipage}[t]{\dimexpr \textwidth - 1.2\mylength \relax}
-Operations/Manufacturing Intern: Worked as a team member in the Operations department of a \$35M/year motion control systems company. Assisted in the conversion of products to RoHS-compliance. Chose, ordered, and tested potential replacements for old/obsolete components. Interacted directly with contract manufacturer FinePitch, global resource Larson and Toubro, and several component distributors. Auctioned and sold \$20k thermal chamber.
-\end{minipage}
-\par
-\bigskip
-\makeheader{Work Experience}
-\par
-L-3 Communications, Ocean Systems:	Electrical Engineer; Electrical Engineer II\\
-Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at two US Navy bases. Electronics design lead on a \$70M coastal observatory contract with the NSF and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the manufacture and testing of hundreds of circuit boards across several product lines. (Goleta, CA, February 2007 – Present)
-
-
 \end{document}
