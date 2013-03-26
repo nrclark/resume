@@ -18,10 +18,24 @@
 
 \pagenumbering{gobble}
 
+\definecolor{BrOrange}{HTML}{FF7F00}
+
+\definecolor{MariPro}{HTML}{D43247}
+\definecolor{DarkDark}{HTML}{000044}
+\definecolor{NGreenB}{HTML}{666633}
+
+\definecolor{BrBlue}{HTML}{FF7F00}
+\newcommand{\NrcColorName}{MariPro}
+\newcommand{\NrcColorTitle}{Black}
+\newcommand{\NrcColorHeaderA}{MidnightBlue}
+\newcommand{\NrcColorSubHeaderA}{MidnightBlue}
+\newcommand{\NrcColorSubHeaderB}{Black}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\WorkExperienceLineOne}[2]{%
-    \nrccolstring{\textbf{#1}}{\textbf{#2}}%
+    \nrccolstring{\textcolor{\NrcColorSubHeaderA}{\textbf{#1}}}%
+    {\textcolor{\NrcColorSubHeaderB}{\textbf{#2}}}%
 }
 
 \newcommand{\WorkExperienceLineTwo}[2]{%
@@ -39,7 +53,7 @@
 \newcommand{\makeheader}[1]{%
 \begingroup%
     \noindent%
-    \textcolor{MidnightBlue}{\Large \textbf{\textsc{#1\\}}}%
+    \textcolor{\NrcColorHeaderA}{\Large \textbf{\textsc{#1\\}}}%
     \hfill%
 \endgroup%
 \hfill%
@@ -50,14 +64,14 @@
 
 \newcommand{\workLthree}{%
 	\WorkExperienceLineOne {L-3 Ocean Systems} {Goleta, CA}
-	\WorkExperienceLineTwo {Electrical Engineer II} {2011-2013}
+	\WorkExperienceLineTwo {Electrical Engineer II} {2011-Present}
 	\WorkExperienceLineTwo {Electrical Engineer I} {2007-2011}
 	\WorkExperienceLineTwo {Electrical Engineering Intern} {2007}
 	\WorkExperienceMidBreak
 	Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at US Navy
-	bases. Electronics design   engineer on a \$70M coastal observatory contract with the NSF and the University of
-	Washington. Responsible for firmware and FPGA code on many designs. Provided engineering support for the
-	manufacture and testing of hundreds of circuit boards across several product lines.
+	bases. Electronics design engineer on a \$70M coastal observatory contract with the National Science Foundation
+	and the University of Washington. Responsible for firmware and FPGA code on many designs. Provided engineering
+	support for the manufacture and testing of several product lines.
 	\WorkExperienceEndBreak%
 }
 
@@ -94,17 +108,17 @@
 
 \hyphenation{Micro-blaze} 
 
-\begin{document}
+\begin{document}%
 %%%%%%%%%%%%%%% Title %%%%%%%%%%%%
 \nrctitle
-{Nicholas Clark}
+{\textcolor{\NrcColorName}{Nicholas Clark}}
 {246 Mathilda Dr.}
 {Goleta, CA 93117}
 {805-636-4033}
 {nicholas.clark@gmail.com}
 %
 \begin{center}\par\smallskip
-\textcolor{RoyalBlue}{\Large \textbf{\textsc{Embedded Systems Designer}}}\par
+\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Embedded Systems Designer}}}\par
 \large \textbf{{Circuit Design, Firmware, Signal Processing, Technical Writing}}\par
 \smallskip
 \noindent \begin{minipage}[t]{0.75\textwidth}%
@@ -126,14 +140,6 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 	\par \smallskip \begin{spacing}{0.95}%
 
     \begin{flushleft} %
-	\makeheader{Human} \par%
-    \begin{itemize}%
-        \item Designing for usability
-        \item Technical writing
-        \item Specifying and understanding design requirements
-        \item Fast learner
-	\end{itemize}%
-	\WorkExperienceMidBreak
 	\makeheader{Electrical Engineering} \par%
     \begin{itemize}%
         \item Analog and digital circuit design techniques
@@ -151,7 +157,7 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
         \item RMA and task scheduling
 	\end{itemize}%
 	%
-	\WorkExperienceMidBreak       
+	\WorkExperienceMidBreak
 	\makeheader{Software Skills} \par%
     %    
     \WorkExperienceLineOne{Engineering Software}{}
@@ -186,7 +192,15 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 	    \item Microsoft Office (Outlook, Word, Powerpoint, Excel, Visio)\\
 	    \item Adobe Photoshop \& Illustrator\\
    	    \item Paint.NET \\
-	\end{itemize}
+	\end{itemize}%
+	\WorkExperienceMidBreak
+	\makeheader{Human} \par%
+    \begin{itemize}%
+        \item Designing for usability
+        \item Technical writing
+        \item Specifying and understanding design requirements
+        \item Fast learner
+	\end{itemize}%
 
 \end{flushleft}%
 \end{spacing} \end{minipage}%
@@ -206,14 +220,7 @@ Good with SPICE simulation, FPGAs, microcontrollers, and DSP algorithms.
 	\makeheader{Volunteer} \par%
    	\WorkExperienceLineOne{FIRST Robotics}{Goleta, CA}
    	\WorkExperienceLineTwo{Team 1717 Engineering Mentor}{2013 Build Season}
-%   	\WorkExperienceMidBreak
-%
-%    	\WorkExperienceLineOne{Hobbies}{}
-%    	\WorkExperienceLineTwo{Programming}{}
-%    	\WorkExperienceLineTwo{Web Design}{}
-%    	\WorkExperienceLineTwo{Wilderness Backpacking}{}
-%    	\WorkExperienceLineTwo{Playing Guitar}{}
-%    	\WorkExperienceMidBreak
+   	\WorkExperienceMidBreak
 	\end{spacing} \end{minipage}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
