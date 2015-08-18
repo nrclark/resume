@@ -8,9 +8,6 @@
 \usepackage{enumitem}
 \usepackage{tabularx}
 
-%\usepackage[scaled]{helvet}
-%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is %to be sans serif
-
 \usepackage[T1]{fontenc}
 \usepackage{setspace}
 
@@ -63,22 +60,52 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Work Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\workKarlStorz}{%
+	\WorkExperienceLineOne {Karl Storz Imaging} {Goleta, CA}
+	\WorkExperienceLineTwo {FPGA Engineer III} {2014-Present}
+	\WorkExperienceLineTwo {FPGA Engineer} {2013-2014}
+	\WorkExperienceMidBreak
+    Lead embedded design engineer. Designed circuit cards and signal-processing
+    systems currently in use at US Navy bases. Electronics design engineer on a
+    \$70M coastal observatory contract with the National Science Foundation and
+    the University of Washington.
+    \WorkExperienceMidBreak
+
+    Worked extensively with Xilinx FPGAs/CPLDs, and with MSP430 microcontrollers.
+    Troubleshot and upgraded existing company firmware, as well as developing
+    and maintaining new firmware across several product lines. Developed 
+    numerous custom FPGA peripherals for various DSP and communication tasks.
+    Designed circuit boards and assemblies.
+    \WorkExperienceMidBreak
+    
+    Worked with mechanical and manufacturing engineers to design high-reliability
+    underwater communication and surveillance systems. Interfaced with
+    purchasing, production, and test engineers to oversee manufacturing runs.
+	\WorkExperienceEndBreak%
+}
+
 \newcommand{\workLthree}{%
 	\WorkExperienceLineOne {L-3 Ocean Systems} {Goleta, CA}
-	\WorkExperienceLineTwo {Electrical Engineer II} {2011-Present}
+	\WorkExperienceLineTwo {Electrical Engineer II} {2011-2013}
 	\WorkExperienceLineTwo {Electrical Engineer I} {2007-2011}
 	\WorkExperienceLineTwo {Electrical Engineering Intern} {2007}
 	\WorkExperienceMidBreak
-    Lead embedded design engineer. Designed circuit cards and signal-processing systems currently in use at US Navy
-    bases. Electronics design engineer on a \$70M coastal observatory contract with the National Science Foundation
-    and the University of Washington. \WorkExperienceMidBreak
+    Lead embedded design engineer. Designed circuit cards and signal-processing
+    systems currently in use at US Navy bases. Electronics design engineer on a
+    \$70M coastal observatory contract with the National Science Foundation and
+    the University of Washington.
+    \WorkExperienceMidBreak
 
-    Worked extensively with Xilinx FPGAs/CPLDs, and with MSP430 microcontrollers. Troubleshot and upgraded existing
-    company firmware, as well as developing and maintaining new firmware across several product lines. Developed 
-    numerous custom FPGA peripherals for various DSP and communication tasks. Designed circuit boards and 
-    assemblies. \WorkExperienceMidBreak
-    Worked with mechanical and manufacturing engineers to design high-reliability underwater communication and 
-    surveillance systems. Interfaced with purchasing, production, and test engineers to oversee manufacturing runs.
+    Worked extensively with Xilinx FPGAs/CPLDs, and with MSP430 microcontrollers.
+    Troubleshot and upgraded existing company firmware, as well as developing
+    and maintaining new firmware across several product lines. Developed 
+    numerous custom FPGA peripherals for various DSP and communication tasks.
+    Designed circuit boards and assemblies.
+    \WorkExperienceMidBreak
+    
+    Worked with mechanical and manufacturing engineers to design high-reliability
+    underwater communication and surveillance systems. Interfaced with
+    purchasing, production, and test engineers to oversee manufacturing runs.
 	\WorkExperienceEndBreak%
 }
 
@@ -86,10 +113,11 @@
 	\WorkExperienceLineOne {Motion Engineering, Inc} {Goleta, CA}
 	\WorkExperienceLineTwo {Engineering Intern} {2006-2007}
 	\WorkExperienceMidBreak
-    Engineering intern. Worked with high-performance motion controllers used in semiconductor fab plants.
-    Assisted in converting several product lines to be RoHS-compliant. Worked as a component engineer to solve 
-    obsolescence issues and suggest workarounds for unavailable parts. Interacted directly with global contractors.
-    Auctioned and sold test equipment.
+    Engineering intern. Worked with high-performance motion controllers used in
+    semiconductor fab plants. Assisted in converting several product lines to
+    be RoHS-compliant. Worked as a component engineer to solve obsolescence
+    issues and suggest workarounds for unavailable parts. Interacted directly
+    with global contractors. Auctioned and sold test equipment.
 	\WorkExperienceEndBreak%
 }
 
@@ -97,10 +125,11 @@
 	\WorkExperienceLineOne {UCSB Life Sciences Department} {Goleta, CA}
 	\WorkExperienceLineTwo {IT Helpdesk} {2004-2006}
 	\WorkExperienceMidBreak
-    Provided support for 800+ faculty, staff and graduate students in two academic departments and two
-    interdisciplinary graduate programs. Responsible for basic and advanced troubleshooting to diagnose and
-    resolve both hardware and software problems. Configured and maintained OS X, Linux, Windows, and FreeBSD
-    computers.
+    Provided support for 800+ faculty, staff and graduate students in two
+    academic departments and two interdisciplinary graduate programs.
+    Responsible for basic and advanced troubleshooting to diagnose and
+    resolve both hardware and software problems. Configured and maintained
+    OS X, Linux, Windows, and FreeBSD computers.
 	\WorkExperienceEndBreak%
 }
 
@@ -108,8 +137,9 @@
     \WorkExperienceLineOne{University of California} {Santa Barbara, CA}
     \WorkExperienceLineTwo{B.S. Electrical Engineering} {2007}
 	\WorkExperienceMidBreak
-    Elective coursework focused on embedded systems, DSP, and technical writing. Active in student chapter of IEEE.
-    Won the ITC 2006 student paper competition for a paper on vehicle-mounted 360-degree FOV camera systems.
+    Elective coursework focused on embedded systems, DSP, and technical writing.
+    Active in student chapter of IEEE. Won the ITC 2006 student paper
+    competition for a paper on vehicle-mounted 360-degree FOV camera systems.
 	\WorkExperienceEndBreak%
 }
 
@@ -119,8 +149,8 @@
 %%%%%%%%%%%%%%% Title %%%%%%%%%%%%
 \nrctitle
 {\textcolor{\NrcColorName}{Nicholas Clark}}
-{246 Mathilda Dr.}
-{Goleta, CA 93117}
+{449 Old Coast Hwy, Apt \#7B}
+{Santa Barbara, CA 93103}
 {805-636-4033}
 {nicholas.clark@gmail.com}
 %
@@ -147,6 +177,16 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
 	\par \smallskip \begin{spacing}{0.95}%
 
     \begin{flushleft} %
+    \makeheader{Embedded Software/Firmware} \par%
+    \begin{itemize}%
+        \item FPGA design with Xilinx and Lattice FPGAs
+        \item Microcontroller design with Microblaze, MSP430, STM32, and
+        AVR families
+        \item High-performance FPGA-based DSP
+        \item Rigorous firmware design with version control and unit tests
+        \item RMA and task scheduling
+    \end{itemize}%
+	\WorkExperienceMidBreak
 	\makeheader{Electrical Engineering} \par%
     \begin{itemize}%
         \item Analog and digital circuit design techniques
@@ -155,16 +195,6 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
         \item PCB design with OrCAD
         \item Electronics manufacturing and DFM principles
 	\end{itemize}%
-	\WorkExperienceMidBreak
-	\makeheader{Embedded Design} \par%
-    \begin{itemize}%
-        \item FPGA design with Xilinx and Lattice FPGAs
-        \item Microcontroller design with MSP430, AVR, and Microblaze families
-        \item High-performance FPGA-based DSP
-        \item Rigorous firmware design with version control and unit tests
-        \item RMA and task scheduling
-	\end{itemize}%
-	%
 	\WorkExperienceMidBreak
 	\makeheader{Software Skills} \par%
     %    
@@ -219,16 +249,16 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
     \noindent \begin{minipage}[t]{0.45\textwidth}%
 	\par \smallskip \begin{spacing}{0.95}%
 	\makeheader{Work Experience} \par%
-		\workLthree
-		\workMotionEng
-%		\workUCSBLifesci
+        \workLthree
+        %\workMotionEng
+        %\workUCSBLifesci
 	
 	\makeheader{Education} \par%
 	    \EducationUCSB
 	
 	\makeheader{Volunteer} \par%
    	\WorkExperienceLineOne{FIRST Robotics}{Goleta, CA}
-   	\WorkExperienceLineTwo{Team 1717 Engineering Mentor}{2013 Build Season}
+   	\WorkExperienceLineTwo{Team 1717 Engineering Mentor}{2013-2015}
    	\WorkExperienceMidBreak
     Electrical engineering mentor for high-school student robotics team.
 	\end{spacing} \end{minipage}
