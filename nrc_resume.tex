@@ -1,5 +1,5 @@
 \documentclass[letterpaper, 10pt]{article}
-\usepackage[margin=0.43in]{geometry}
+\usepackage[margin=0.47in]{geometry}
 
 \usepackage{calc}
 
@@ -180,6 +180,7 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
 %    vertical: topsep, partopsep, parsep, itemsep
 %
 \newcommand{\MyColumnOne}{%
+	\vspace{1.3mm}
     \setitemize[0]{leftmargin=*, parsep=0pt, itemsep=0pt, topsep=0pt, partopsep=0pt}%
     \noindent \begin{minipage}[t]{0.45\textwidth}%
 	\par \smallskip \begin{spacing}{0.95}%
@@ -191,7 +192,7 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
         \item MicroBlaze, MSP430, AVR, and ARM microcontrollers
         \item High-performance FPGA-based DSP and communications peripherals
         \item Rigorous firmware design with version control and unit tests
-        \item Build automation with GNU Make
+        \item Firmware build automation
     \end{itemize}%
 	\WorkExperienceMidBreak
 	\makeheader{Electrical Engineering} \par%
@@ -227,7 +228,7 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
 	    \item Scripting with Bash, Python, and TCL \\
 	    \item Typesetting with \LaTeX\\
 	    \item Version control with Git, Mercurial, and Subversion\\
-	    \item Open-Source Toolchains\\
+	    \item GCC and Clang toolchains\\
 	\end{itemize}
     %
 	\WorkExperienceMidBreak
@@ -236,7 +237,7 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
     \begin{itemize}%
 	    \item Build automation with Jenkins\\
 	    \item Server deployment with Ansible\\
-	    \item Server Virtualization with KVM and VSphere\\
+	    \item Server virtualization with KVM and VSphere\\
 	    \item Linux server management\\
 	\end{itemize}%
     %
@@ -258,13 +259,16 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
 \newcommand{\MyColumnTwo}{%
     \noindent \begin{minipage}[t]{0.45\textwidth}%
 	\par \smallskip \begin{spacing}{0.95}%
+	\vspace{2.45mm}
+
+	\WorkExperienceMidBreak
 	\makeheader{Work Experience} \par%
 		\workQSC
         \workKarlStorz
         \workLthree
         %\workMotionEng
         %\workUCSBLifesci
-	
+
 	\makeheader{Education} \par%
 	    \EducationUCSB
 	\end{spacing} \end{minipage}
