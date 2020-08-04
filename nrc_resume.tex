@@ -65,15 +65,30 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Work Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\workQSC}{%
-    \WorkExperienceLineOne {QSC Audio} {Boulder, CO}
-    \WorkExperienceLineTwo {Hardware Engineer IV} {2015-March 2017}
+\newcommand{\workUA}{%
+    \WorkExperienceLineOne {Universal Audio} {Boulder, CO}
+    \WorkExperienceLineTwo {Senior System Software Engineer} {2019-present}
+    \WorkExperienceLineTwo {System Software Engineer} {2017-2019}
+    \WorkExperienceMidBreak
+    Software engineer and OS lead for realtime audio products. Develop and
+    maintain Yocto-based Linux distributions. Manage builds and deployment.
+    System software in C/C++, Python, and Bash. Train internal teams in
+    cross-compilation methods. Mentor junior developers.
     \WorkExperienceMidBreak
 
-    R\&D Engineer on an upcoming line of video products. Worked with large
-    FPGAs to develop custom video-processing IP. Wrote firmware for Microblaze
-    microcontrollers. Wrote and verified FPGA cores in SystemVerilog.
-    Deployed source-control and build servers.
+    Hardware/system architect on upcoming products. Investigate and propose
+    low-cost solutions to product-level challenges.
+    \WorkExperienceMidBreak
+}
+
+\newcommand{\workQSC}{%
+    \WorkExperienceLineOne {QSC Systems} {Boulder, CO}
+    \WorkExperienceLineTwo {Hardware Engineer IV} {2015-2017}
+    \WorkExperienceMidBreak
+
+    R\&D Engineer on video-over-IP products. Worked with large FPGAs to develop
+    custom video-processing IP. Wrote and verified FPGA cores in SystemVerilog.
+    Developed Linux drivers to control FPGA peripherals.
     \WorkExperienceMidBreak
 
     Worked with software and EE teams to design prototype hardware. Involved
@@ -87,15 +102,13 @@
     \WorkExperienceMidBreak
 
     Lead FPGA engineer on commercially-available medical camera systems.
-    Worked closely with software, electrical and mechanical engineering
-    teams to develop successful commercial products. Designed 3D, 2k and 4k
-    camera systems operating at NTSC and PAL frame rates.
+    Worked closely with software, electrical and mechanical
+    teams to develop successful products.
     \WorkExperienceMidBreak
-    
-    Designed and implemented camera firmware for Xilinx FPGAs in Vivado and
-    ISE. Created custom FPGA peripherals for sensor video receivers,
-    communication, and DVI interfaces. Wrote C applications to run on
-    FPGA-hosted microcontrollers. Mentored junior engineers.
+
+    Designed and implemented camera firmware with Xilinx FPGAs. Wrote custom
+    Verilog peripherals for communication and video, and wrote firmware for
+    soft-core microcontrollers. Mentored junior engineers.
     \WorkExperienceEndBreak%
 }
 
@@ -104,17 +117,13 @@
     \WorkExperienceLineTwo {Electrical Engineer II} {2011-2013}
     \WorkExperienceLineTwo {Electrical Engineer I} {2007-2011}
     \WorkExperienceMidBreak
-    Embedded design engineer. Designed circuit cards and signal-processing
-    systems currently in use at US Navy bases. Electronics design engineer on a
-    \$70M coastal observatory contract with the National Science Foundation and
-    the University of Washington.
+    Circuit designer, PCB layout, and firmware engineer for high-reliability
+    sonar systems.
     \WorkExperienceMidBreak
 
-    Worked with FPGAs and CPLDs. Developed new firmware and provided
-    upgrades across several product lines. Developed numerous
-    custom FPGA peripherals for DSP and communication tasks. Designed
-    high-reliability circuit-boards and assemblies.Interfaced with production
-    and test engineers to oversee manufacturing runs.
+    Developed and implemented FPGA, CPLD, and microcontroller firmware across
+    several product lines. Wrote custom peripherals for DSP and
+    communication tasks.
     \WorkExperienceEndBreak%
 }
 
@@ -144,14 +153,12 @@
 
 \newcommand{\EducationUCSB}{%
     \WorkExperienceLineOne{University of California} {Santa Barbara, CA}
-    \WorkExperienceLineTwo{B.S. Electrical Engineering} {2007}
-    \WorkExperienceMidBreak
-    Elective coursework focused on embedded systems, DSP, and technical
-    writing. Active in student chaper of IEEE.
+    \WorkExperienceLineTwo{B.S. Electrical Engineering. Focus: Digital Signal
+                           Processing}
     \WorkExperienceEndBreak%
 }
 
-\hyphenation{Micro-blaze} 
+\hyphenation{Micro-blaze}
 
 \begin{document}%
 %%%%%%%%%%%%%%% Title %%%%%%%%%%%%
@@ -163,14 +170,14 @@
 {nicholas.clark@gmail.com}
 %
 \begin{center}\par\smallskip
-\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Embedded Systems Designer}}}\par
-\large \textbf{{Firmware, Circuit Design, Signal Processing, Technical Writing}}\par
+\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Staff System Software Engineer}}}\par
+\large \textbf{{Embedded Linux, System Software, Microcontroller and FPGA Firmware}}\par
 \smallskip
 \noindent \begin{minipage}[t]{0.75\textwidth}%
-\begin{sloppypar}
-Dynamic electrical engineer with nine years experience in embedded systems. 
-Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
-\end{sloppypar}
+\begin{center}
+Dynamic engineer with 12 years experience in embedded systems. Specialties in
+Linux, microcontrollers, FPGAs, and mixed-signal circuit design.
+\end{center}
 \end{minipage}
 \end{center}
 \par \smallskip \smallskip
@@ -186,58 +193,63 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
     \par \smallskip \begin{spacing}{0.95}%
 
     \begin{flushleft} %
-    \makeheader{Embedded Firmware/Software} \par%
+    \makeheader{Software \& Firmware} \par%
     \begin{itemize}%
-        \item FPGA design with Xilinx and Lattice FPGAs
-        \item MicroBlaze, MSP430, AVR, and ARM microcontrollers
-        \item High-performance FPGA-based DSP and communications peripherals
-        \item Rigorous firmware design with version control and unit tests
-        \item Firmware build automation
+        \item Embedded Linux using Yocto or Buildroot
+        \item Board bringup and Linux device drivers
+        \item System Software in C, Python, and Bash
+        \item Build automation and scripting
+        \item Linux system administration
+        \item FPGA programming with Verilog
+        \item Microcontroller firmware in C
+
     \end{itemize}%
     \WorkExperienceMidBreak
     \makeheader{Electrical Engineering} \par%
     \begin{itemize}%
-        \item Analog and digital circuit design techniques
+        \item Mixed-signal circuit design techniques
         \item Low-noise signal processing and filter design
         \item High-speed digital design
-        \item Basic communications theory
-        \item Schematic capture/PCB design with Cadence OrCAD
+        \item Schematic capture/PCB design
         \item Electronics manufacturing and DFM principles
+        \item Vendor engagement
     \end{itemize}%
     \WorkExperienceMidBreak
-    \makeheader{Software Skills} \par%
-    %    
+    \makeheader{Software Tools} \par%
+    %
     \WorkExperienceLineOne{Engineering Software}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
-        \item Xilinx Vivado, ISE \& EDK FPGA Design Suites
+        \item Xilinx Vivado and ISE Design Suites
+        \item Lattice Diamond and ispLEVER Design Suites
         \item LTSPICE Circuit Simulator
         \item MATLAB / SIMULINK
         \item OrCAD Schematic Capture \& PCB Layout
         \item HyperLynx
-        \item TI Code Composer Studio
-        \item Atmel Studio
     \end{itemize}%
     %
     \WorkExperienceMidBreak
     \WorkExperienceLineOne{Programming}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
-        \item Verilog and SystemVerilog HDL\\
-        \item C for bare-metal, FreeRTOS, and POSIX targets\\
         \item Scripting with Bash, Python, and TCL \\
+        \item C for Linux/POSIX and microcontrollers\\
+        \item Software packaging with GNU Autotools and CMake\\
+        \item Build systems using GNU Make\\
+        \item Cross-compilation toolchains\\
+        \item Verilog HDL\\
+        \item Version control with Git\\
         \item Typesetting with \LaTeX\\
-        \item Version control with Git, Mercurial, and Subversion\\
-        \item GCC and Clang toolchains\\
+
     \end{itemize}
     %
     \WorkExperienceMidBreak
     \WorkExperienceLineOne{Dev-Ops}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
-        \item Build automation with Jenkins\\
+        \item Build automation with Jenkins and Bamboo\\
         \item Server deployment with Ansible\\
-        \item Server virtualization with KVM and VSphere\\
+        \item Server virtualization with KVM\\
         \item Linux server management\\
     \end{itemize}%
     %
@@ -245,9 +257,9 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
     \WorkExperienceLineOne{General Computing}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
-        \item Linux, OS X, FreeBSD, and Windows\\
+        \item Linux, MacOS, FreeBSD, and Windows\\
         \item Hardware \& software troubleshooting\\
-        \item Microsoft Office, including Visio\\
+        \item Microsoft Office and Visio\\
         \item Adobe Photoshop \& Illustrator\\
     \end{itemize}%
     \WorkExperienceMidBreak
@@ -263,6 +275,7 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
 
     \WorkExperienceMidBreak
     \makeheader{Work Experience} \par%
+        \workUA
         \workQSC
         \workKarlStorz
         \workLthree
@@ -278,7 +291,7 @@ Skilled with FPGAs, microcontrollers, DSP algorithms, and SPICE simulation.
 %\nrctwocols
 %\begin{center}$\bullet$\end{center}\par
 
-\noindent\begin{tabularx}{\textwidth}{@{}X|X@{}} 
+\noindent\begin{tabularx}{\textwidth}{@{}X|X@{}}
 \hline
 {\MyColumnOne\hfill} & {\hfill\MyColumnTwo}
 \end{tabularx}
