@@ -21,7 +21,7 @@ define \n
 endef
 
 %.pdf: %.tex $(AUX_FILES)
-	$(foreach x, 1 2 3 4,$(PDF_LATEX) $<$(\n))
+	$(foreach x, 1 2 3 4 5 6 7 8,$(PDF_LATEX) $<$(\n))
 
 .INTERMEDIATE: $(MAIN_FILE:%.tex=%.pdf)
 
