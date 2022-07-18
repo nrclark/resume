@@ -1,5 +1,5 @@
 \documentclass[letterpaper, 10pt]{article}
-\usepackage[margin=0.47in]{geometry}
+\usepackage[margin=0.49in]{geometry}
 
 \usepackage{calc}
 
@@ -65,50 +65,62 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Work Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\workCruise}{%
+    \WorkExperienceLineOne {Cruise Automation} {San Francisco, CA}
+    \WorkExperienceLineTwo {Senior Software Engineer II} {2021-present}
+    \WorkExperienceLineTwo {Senior Software Engineer} {2020-2021}
+    \WorkExperienceMidBreak
+    Architect and software engineer for safety-critical systems. Design and
+    maintain Buildroot-based Linux systems. Bootloader design and platform
+    bringup. Mentor junior developers.
+    \WorkExperienceMidBreak
+
+    Initial bringup of new hardware systems. Work closely with hardware
+    engineers to design peripherals and motherboards.
+    \WorkExperienceMidBreak
+}
+
 \newcommand{\workUA}{%
     \WorkExperienceLineOne {Universal Audio} {Boulder, CO}
-    \WorkExperienceLineTwo {Senior System Software Engineer} {2019-present}
+    \WorkExperienceLineTwo {Senior System Software Engineer} {2019-2020}
     \WorkExperienceLineTwo {System Software Engineer} {2017-2019}
     \WorkExperienceMidBreak
     Software engineer and OS lead for realtime audio products. Develop and
     maintain Yocto-based Linux distributions. Manage builds and deployment.
-    System software in C/C++, Python, and Bash. Train internal teams in
-    cross-compilation methods. Mentor junior developers.
     \WorkExperienceMidBreak
 
-    Hardware/system architect on upcoming products. Investigate and propose
-    low-cost solutions to product-level challenges.
+    System software in C/C++, Python, and Bash. Train internal teams in
+    cross-compilation methods. Mentor junior developers.
     \WorkExperienceMidBreak
 }
 
 \newcommand{\workQSC}{%
     \WorkExperienceLineOne {QSC Systems} {Boulder, CO}
-    \WorkExperienceLineTwo {Hardware Engineer IV} {2015-2017}
+    \WorkExperienceLineTwo {Senior FPGA Engineer} {2015-2017}
     \WorkExperienceMidBreak
 
     R\&D Engineer on video-over-IP products. Worked with large FPGAs to develop
-    custom video-processing IP. Wrote and verified FPGA cores in SystemVerilog.
-    Developed Linux drivers to control FPGA peripherals.
+    custom video-processing IP. Developed Linux drivers to control FPGA
+    peripherals.
     \WorkExperienceMidBreak
 
-    Worked with software and EE teams to design prototype hardware. Involved
-    in hardware specification, vendor engagement, and pricing negotiation.
+    Architecure planning with software and hardware teams. Involved in
+    hardware design and pricing negotiation.
     \WorkExperienceEndBreak%
 }
 
 \newcommand{\workKarlStorz}{%
     \WorkExperienceLineOne {Karl Storz Imaging} {Goleta, CA}
-    \WorkExperienceLineTwo {FPGA Engineer III} {2013-2015}
+    \WorkExperienceLineTwo {FPGA Engineer} {2013-2015}
     \WorkExperienceMidBreak
 
-    Lead FPGA engineer on commercially-available medical camera systems.
-    Worked closely with software, electrical and mechanical
-    teams to develop successful products.
+    FPGA lead on commercially-available medical camera systems. Worked closely
+    with software, electrical and mechanical teams to develop successful
+    products.
     \WorkExperienceMidBreak
 
-    Designed and implemented camera firmware with Xilinx FPGAs. Wrote custom
-    Verilog peripherals for communication and video, and wrote firmware for
-    soft-core microcontrollers. Mentored junior engineers.
+    Wrote custom Verilog peripherals for communication and video, and wrote
+    firmware for soft-core microcontrollers.
     \WorkExperienceEndBreak%
 }
 
@@ -116,14 +128,6 @@
     \WorkExperienceLineOne {L-3 Ocean Systems} {Goleta, CA}
     \WorkExperienceLineTwo {Electrical Engineer II} {2011-2013}
     \WorkExperienceLineTwo {Electrical Engineer I} {2007-2011}
-    \WorkExperienceMidBreak
-    Circuit designer, PCB layout, and firmware engineer for high-reliability
-    sonar systems.
-    \WorkExperienceMidBreak
-
-    Developed and implemented FPGA, CPLD, and microcontroller firmware across
-    several product lines. Wrote custom peripherals for DSP and
-    communication tasks.
     \WorkExperienceEndBreak%
 }
 
@@ -164,19 +168,19 @@
 %%%%%%%%%%%%%%% Title %%%%%%%%%%%%
 \nrctitle
 {\textcolor{\NrcColorName}{Nicholas Clark}}
-{1718 Zeus Dr.}
-{Lafayette, CO 80026}
+{509 North 3rd St.}
+{San Jose, CA 95112}
 {805-636-4033}
 {nicholas.clark@gmail.com}
 %
 \begin{center}\par\smallskip
-\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Staff System Software Engineer}}}\par
-\large \textbf{{Embedded Linux, System Software, Microcontroller and FPGA Firmware}}\par
+\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Staff Software Engineer}}}\par
+\large \textbf{{Embedded Linux Systems}}\par
 \smallskip
 \noindent \begin{minipage}[t]{0.75\textwidth}%
 \begin{center}
-Dynamic engineer with 12 years experience in embedded systems. Specialties in
-Linux, microcontrollers, FPGAs, and mixed-signal circuit design.
+Dynamic engineer with deep experience in embedded systems. Specialties in
+Linux, hardware/software co-design, system architecture, and board bringup.
 \end{center}
 \end{minipage}
 \end{center}
@@ -195,22 +199,22 @@ Linux, microcontrollers, FPGAs, and mixed-signal circuit design.
     \begin{flushleft} %
     \makeheader{Software \& Firmware} \par%
     \begin{itemize}%
-        \item Embedded Linux using Yocto or Buildroot
-        \item Board bringup and Linux device drivers
-        \item System Software in C, Python, and Bash
+        \item Embedded Linux using Yocto and Buildroot
+        \item Bootloaders and Linux kernel drivers
+        \item System software in C, Python, and Bash
         \item Build automation and scripting
         \item Linux system administration
-        \item FPGA programming with Verilog
-        \item Microcontroller firmware in C
+        \item FPGA programming
+        \item Microcontroller firmware
 
     \end{itemize}%
     \WorkExperienceMidBreak
     \makeheader{Electrical Engineering} \par%
     \begin{itemize}%
-        \item Mixed-signal circuit design techniques
-        \item Low-noise signal processing and filter design
-        \item High-speed digital design
+        \item Circuit-board bringup and troubleshooting
         \item Schematic capture/PCB design
+        \item Mixed-signal circuit design techniques
+        \item High-speed digital design
         \item Electronics manufacturing and DFM principles
         \item Vendor engagement
     \end{itemize}%
@@ -220,12 +224,12 @@ Linux, microcontrollers, FPGAs, and mixed-signal circuit design.
     \WorkExperienceLineOne{Engineering Software}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
+        \item Buildroot and Yocto Linux
+        \item U-boot
         \item Xilinx Vivado and ISE Design Suites
         \item Lattice Diamond and ispLEVER Design Suites
         \item LTSPICE Circuit Simulator
-        \item MATLAB / SIMULINK
         \item OrCAD Schematic Capture \& PCB Layout
-        \item HyperLynx
     \end{itemize}%
     %
     \WorkExperienceMidBreak
@@ -262,7 +266,7 @@ Linux, microcontrollers, FPGAs, and mixed-signal circuit design.
         \item Microsoft Office and Visio\\
         \item Adobe Photoshop \& Illustrator\\
     \end{itemize}%
-    \WorkExperienceMidBreak
+
 
 \end{flushleft}%
 \end{spacing} \end{minipage}%
@@ -275,6 +279,7 @@ Linux, microcontrollers, FPGAs, and mixed-signal circuit design.
 
     \WorkExperienceMidBreak
     \makeheader{Work Experience} \par%
+        \workCruise
         \workUA
         \workQSC
         \workKarlStorz
