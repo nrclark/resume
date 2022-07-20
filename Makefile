@@ -9,7 +9,7 @@ OS := $(if $(OS),$(OS),linux)
 
 ifeq ($(OS),cygwin)
 	PDFVIEW := $(if $(strip $(shell which evince 2>/dev/null)),evince,cygstart)
-else ifeq ($(OS),darwin) 
+else ifeq ($(OS),darwin)
 	PDFVIEW := open -a preview
 else
 	PDFVIEW := evince
@@ -21,7 +21,7 @@ define \n
 endef
 
 %.pdf: %.tex $(AUX_FILES)
-	$(foreach x, 1 2 3 4 5 6 7 8 9 10,$(PDF_LATEX) $<$(\n))
+	$(foreach x, 1 2 3 4 5 6 7 8 9 10 11 12 13 14,$(PDF_LATEX) $<$(\n))
 
 .INTERMEDIATE: $(MAIN_FILE:%.tex=%.pdf)
 
