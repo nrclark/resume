@@ -1,5 +1,5 @@
 \documentclass[letterpaper, 10pt]{article}
-\usepackage[margin=0.46in]{geometry}
+\usepackage[margin=0.50in]{geometry}
 
 \usepackage{calc}
 
@@ -75,12 +75,11 @@
     \WorkExperienceMidBreak
 
     Develop Yocto-based Linux distribution for use on a family of upcoming
-    energy-storage systems. Customize bootloader and kernel. Develop Linux
-    kernel modules.
+    energy-storage systems.
     \WorkExperienceMidBreak
 
-    Initial bringup of new hardware systems. Work closely with hardware
-    engineers to design peripherals.
+    Design and implement entire build flow, including CI/CD to internal teams.
+    Migrate repos to Gitlab and use Gitlab CI/CD to run cloud-hosted AWS builds.
     \WorkExperienceMidBreak
 }
 
@@ -93,6 +92,11 @@
     maintain Buildroot-based Linux systems. Bootloader design and platform
     bringup. Mentor junior developers.
     \WorkExperienceMidBreak
+
+    Implement build-reproducibility and A/B delta firmware update mechanism
+    used on hardware in upcoming self-driving products. Work with Buildkite
+    and Artifactory administrators to develop custom build plans.
+    \WorkExperienceMidBreak
 }
 
 \newcommand{\workUA}{%
@@ -101,7 +105,11 @@
     \WorkExperienceLineTwo {System Software Engineer} {2017-2019}
     \WorkExperienceMidBreak
     Software engineer and OS lead for realtime audio products. Develop and
-    maintain Yocto-based Linux distributions. Manage builds and deployment.
+    maintain Yocto-based Linux distributions.
+    \WorkExperienceMidBreak
+
+    Manage CI server, builds, deployment, and firmware updates for consumer
+    products.
     \WorkExperienceMidBreak
 
     System software in C/C++, Python, and Bash. Train internal teams in
@@ -113,15 +121,6 @@
     \WorkExperienceLineOne {QSC Systems} {Boulder, CO}
     \WorkExperienceLineTwo {Senior FPGA Firmware Engineer} {2015-2017}
     \WorkExperienceMidBreak
-
-    R\&D Engineer on video-over-IP products. Worked with large FPGAs to develop
-    custom video-processing IP. Developed Linux drivers to control FPGA
-    peripherals.
-    \WorkExperienceMidBreak
-
-    Architecure planning with software and hardware teams. Involved in
-    hardware design and pricing negotiation.
-    \WorkExperienceEndBreak%
 }
 
 \newcommand{\workKarlStorz}{%
@@ -195,13 +194,13 @@
 {nicholas.clark@gmail.com}
 %
 \begin{center}\par\smallskip
-\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Senior Staff Software Engineer}}}\par
-\large \textbf{{Devices and Operating Systems}}\par
+\textcolor{\NrcColorTitle}{\Large \textbf{\textsc{Software Architect}}}\par
+\large \textbf{{Software and Build Systems}}\par
 \smallskip
 \noindent \begin{minipage}[t]{0.75\textwidth}%
 \begin{center}
-Dynamic engineer with deep experience in embedded systems. Specialties in
-Linux, hardware/software co-design, system architecture, and board bringup.
+Dynamic engineer with deep CI/CD experience as a developer and as a build
+engineer. Specialties in embedded Linux firmware and build/test automation.
 \end{center}
 \end{minipage}
 \end{center}
@@ -218,39 +217,30 @@ Linux, hardware/software co-design, system architecture, and board bringup.
     \par \smallskip \begin{spacing}{0.95}%
 
     \begin{flushleft} %
-    \makeheader{Software \& Firmware} \par%
+    \makeheader{CI/CD Systems} \par%
     \begin{itemize}%
-        \item Embedded Linux using Yocto and Buildroot
-        \item Bootloaders and Linux kernel drivers
-        \item System software in C, C++, Python, and Bash
-        \item Product design
-        \item Build automation and scripting
-        \item Linux system administration
-        \item Microcontroller and FPGA firmware
+        \item Collaboration with developers, test engineers, and release teams
+        \item CI/CD pipelines and build-promotion workflows
+        \item Git hosting and repo management
+        \item Build automation with common CI platforms
+        \item Scripting and build systems
+        \item Packaging for Debian, Ubuntu, and Redhat systems
+        \item Cross-compilation and specialized toolchains
+        \item Scripting in Python, TCL, and Bash
+        \item AWS administration
+    \end{itemize}%
+    \WorkExperienceMidBreak
 
-    \end{itemize}%
-    \WorkExperienceMidBreak
-    \makeheader{Electrical Engineering} \par%
-    \begin{itemize}%
-        \item Circuit-board bringup and troubleshooting
-        \item Schematic capture/PCB design
-        \item Mixed-signal circuit design techniques
-        \item High-speed digital design
-        \item Electronics manufacturing and DFM principles
-        \item Vendor engagement
-    \end{itemize}%
-    \WorkExperienceMidBreak
     \makeheader{Software Tools} \par%
     %
-    \WorkExperienceLineOne{Engineering Software}{}
+    \WorkExperienceLineOne{Build Tools}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
-        \item Buildroot and Yocto Linux
-        \item U-boot
-        \item Xilinx and Lattice FPGA Design Suites
-        \item LTSPICE Circuit Simulator
-        \item OrCAD Schematic Capture \& PCB Layout
-        \item KiCad Schematic Capture \& PCB Design
+        \item Jenkins, Bamboo, and Gitlab CI systems
+        \item Git repo hosting with Gitlab, Gitea, and  Gitolite/Gitweb
+        \item CMake, Scons, and GNU Autotools build systems
+        %\item Python Setuptools
+        %\item Debian and Redhat package generation
     \end{itemize}%
     %
     \WorkExperienceMidBreak
@@ -259,8 +249,6 @@ Linux, hardware/software co-design, system architecture, and board bringup.
     \begin{itemize}%
         \item Scripting with Bash, Python, and TCL \\
         \item C and C++ for Linux/POSIX and microcontrollers\\
-        \item Software packaging with GNU Autotools and CMake\\
-        \item Build systems using GNU Make\\
         \item Cross-compilation toolchains\\
         \item Open-source software support\\
         \item Version control with Git\\
@@ -269,23 +257,34 @@ Linux, hardware/software co-design, system architecture, and board bringup.
     \end{itemize}
     %
     \WorkExperienceMidBreak
-    \WorkExperienceLineOne{Dev-Ops}{}
-    \WorkExperienceMidBreak
-    \begin{itemize}%
-        \item Build automation with Jenkins and Bamboo\\
-        \item Server deployment with Ansible\\
-        \item Server virtualization with KVM\\
-        \item Linux server management\\
-    \end{itemize}%
-    %
-    \WorkExperienceMidBreak
     \WorkExperienceLineOne{General Computing}{}
     \WorkExperienceMidBreak
     \begin{itemize}%
         \item Linux, MacOS, FreeBSD, and Windows\\
         \item Hardware \& software troubleshooting\\
         \item Microsoft Office and Visio\\
-        \item Adobe Photoshop \& Illustrator\\
+        %\item Adobe Photoshop \& Illustrator\\
+    \end{itemize}%
+    \WorkExperienceMidBreak
+
+    \makeheader{Software \& Firmware} \par%
+    \begin{itemize}%
+        \item Yocto and Buildroot-based systems
+        \item Bootloaders and Linux kernel drivers
+        \item System software in C, C++, Python, and Bash
+        \item Cross-functional design
+        \item Build automation and CI workflow
+        \item Microcontroller and FPGA firmware
+    \end{itemize}%/.
+    \WorkExperienceMidBreak
+
+    \makeheader{Hardware Engineering} \par%
+    \begin{itemize}%
+        \item Circuit-board bringup and troubleshooting
+        \item Schematic capture/PCB design
+        \item Mixed-signal circuit design techniques
+        \item High-speed digital design
+        \item Electronics manufacturing and DFM principles
     \end{itemize}%
 
 
